@@ -1,4 +1,4 @@
-# Pinned item to MUI cards
+# Github pinned item to Material UI cards
 ## Usage:
 Save `pinned-to-card.js` and `credentials.json` in `/src/` folder.
 Add Github credentials and length of the item list in `credentials.json` file.
