@@ -59,7 +59,7 @@ const parseToMui = async(data) => {
   const projects = project_edges.map(project_edge => project_edge.node);
   const project_cards = projects.map(function(project){
     if(project.__typename=="Repository"){
-      return <Card sx={{width: 400,height: 200}}>
+      return <Card key={project.name} sx={{width: 400,height: 200}}>
         <CardHeader title={project.name} subheader={project.primaryLanguage.name}/>
         <CardContent>
           <Typography variant="body2" component="p">
@@ -72,7 +72,7 @@ const parseToMui = async(data) => {
           </Card>
     }
     else if(project.__typename=="Gist"){
-      return <Card sx={{ maxWidth: 345 }}>
+      return <Card key={project.name} sx={{ maxWidth: 345 }}>
         <CardHeader title={project.name}  />
         <CardContent>
           <Typography variant="body2" component="p">
